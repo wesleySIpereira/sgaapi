@@ -1,54 +1,35 @@
-# CodeIgniter 4 Framework
+# API NOVOSGA 2.0.8 
+## _Api para gerar senha de forma simples_
 
-## What is CodeIgniter?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Api desenvolvida para facilitar a criação de novas senhas dentro do sistema.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- simples e direta.
+- retorna a senha em arquivo pdf
+- podendo  enviar  direto para impressão  
 
-## Important Change with index.php
+## Criação
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Criado para facilitar a geração de tickets sem a necessidade de um painel touch
+o que diminui bastante no valor final do sistema, o mesmo computado pode mostrar as senhas e gerar os tickets por meio de softwarer desktop. 
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## Instalação
 
-## Repository Management
+Requerimento para funcionar [PHP 7.5 ou superior](https://php.net/).
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Install the dependencies and devDependencies and start the server.
 
-## Contributing
+```sh
+deve setar o mesmo banco de dados usad pelo novosga
+modifique o arquivo database.php dentro de app/config/
 
-We welcome contributions from the community.
+```
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
 
-## Server Requirements
 
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+ 
