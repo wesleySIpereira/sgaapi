@@ -1,0 +1,61 @@
+ERROR - 2023-01-15 19:35:17 --> Error connecting to the database: mysqli_sql_exception: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-15 19:35:17 --> Unable to connect to the database.
+Main connection [MySQLi]: No route to host
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 19:36:24 --> Class 'Mpdf\Mpdf' not found
+in APPPATH/Controllers/Api.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->index()
+ 2 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 19:36:43 --> Class 'Mpdf\Mpdf' not found
+in APPPATH/Controllers/Api.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->index()
+ 2 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 19:36:44 --> Class 'Mpdf\Mpdf' not found
+in APPPATH/Controllers/Api.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->index()
+ 2 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,223 @@
+ERROR - 2023-01-18 23:10:08 --> Error connecting to the database: mysqli_sql_exception: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-18 23:10:08 --> Unable to connect to the database.
+Main connection [MySQLi]: No route to host
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:11:31 --> Temporary files directory "/var/www/html/sgapi/vendor/mpdf/mpdf/src/Config/../../tmp/mpdf" is not writable
+in FCPATH/vendor/mpdf/mpdf/src/Cache.php on line 21.
+ 1 FCPATH/vendor/mpdf/mpdf/src/ServiceFactory.php(67): Mpdf\Cache->__construct()
+ 2 FCPATH/vendor/mpdf/mpdf/src/Mpdf.php(1083): Mpdf\ServiceFactory->getServices()
+ 3 APPPATH/Controllers/Api.php(58): Mpdf\Mpdf->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:12:36 --> Temporary files directory "/var/www/html/sgapi/vendor/mpdf/mpdf/src/Config/../../tmp/mpdf" is not writable
+in FCPATH/vendor/mpdf/mpdf/src/Cache.php on line 21.
+ 1 FCPATH/vendor/mpdf/mpdf/src/ServiceFactory.php(67): Mpdf\Cache->__construct()
+ 2 FCPATH/vendor/mpdf/mpdf/src/Mpdf.php(1083): Mpdf\ServiceFactory->getServices()
+ 3 APPPATH/Controllers/Api.php(58): Mpdf\Mpdf->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:14:28 --> Undefined variable: sigla
+in APPPATH/Controllers/Api.php on line 160.
+ 1 APPPATH/Controllers/Api.php(160): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:16:44 --> Undefined variable: title
+in APPPATH/Views/template/print.php on line 5.
+ 1 APPPATH/Views/template/print.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/template/print.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Api.php(63): view()
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:17:42 --> Undefined variable: sigla
+in APPPATH/Controllers/Api.php on line 53.
+ 1 APPPATH/Controllers/Api.php(53): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:18:29 --> Header may not contain more than a single header, new line detected
+in FCPATH/vendor/mpdf/mpdf/src/Mpdf.php on line 9602.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/vendor/mpdf/mpdf/src/Mpdf.php(9602): header()
+ 3 APPPATH/Controllers/Api.php(64): Mpdf\Mpdf->Output()
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:20:30 --> Header may not contain more than a single header, new line detected
+in FCPATH/vendor/mpdf/mpdf/src/Mpdf.php on line 9602.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/vendor/mpdf/mpdf/src/Mpdf.php(9602): header()
+ 3 APPPATH/Controllers/Api.php(64): Mpdf\Mpdf->Output()
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:22:26 --> Header may not contain more than a single header, new line detected
+in FCPATH/vendor/mpdf/mpdf/src/Mpdf.php on line 9602.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/vendor/mpdf/mpdf/src/Mpdf.php(9602): header()
+ 3 APPPATH/Controllers/Api.php(66): Mpdf\Mpdf->Output()
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-18 23:50:11 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-18 23:50:11 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-18 23:50:32 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-18 23:50:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:50:41 --> Undefined offset: 0
+in APPPATH/Models/AtendimentoModel.php on line 47.
+ 1 APPPATH/Models/AtendimentoModel.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:50:41 --> Undefined offset: 0
+in APPPATH/Models/AtendimentoModel.php on line 47.
+ 1 APPPATH/Models/AtendimentoModel.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-18 23:51:37 --> Undefined offset: 0
+in APPPATH/Models/AtendimentoModel.php on line 47.
+ 1 APPPATH/Models/AtendimentoModel.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 3 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->tirarsenha()
+ 4 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

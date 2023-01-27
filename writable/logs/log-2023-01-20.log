@@ -1,0 +1,599 @@
+CRITICAL - 2023-01-20 19:30:47 --> fopen(&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Wepsistemas&lt;/title&gt;
+    &lt;style&gt;
+       #senha {
+           width: 300px;
+           min-height: 150px;
+           margin: auto;
+          
+       }
+
+       #senha * {
+           font-family: monospace;
+           font-size: 12pt;
+           text-align: center;
+           line-height: 1;
+       }
+
+       #senha header {
+           font-size: 10pt;
+           padding: 10px 0;
+       }
+
+       #senha header p {
+           margin: 0;
+       }
+
+       #senha header .unidade {
+           font-size: 14pt;
+           font-weight: bold;
+       }
+
+       #senha section {
+           font-size: 10pt;
+           padding: 10px 0;
+       }
+
+       #senha section p {
+           margin: 5px 0;
+           
+       }
+
+       #senha section .prioridade {
+           font-weight: bold;
+       }
+
+       #senha section .senha {
+           font-size: 35pt;
+           line-height: 50pt;
+           font-weight: bold;
+           background-color: black;
+           color: white;
+           border-top-left-radius: 15px;
+           border-bottom-right-radius: 15px;
+           
+       }
+
+       #senha section .data-hora {
+           padding: 10pt 0;
+       }
+
+       #senha footer {
+           font-size: 5pt;
+           padding: 10px 0;
+           font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+       }
+
+       #senha footer p {
+           margin: 0;
+           
+       }
+    &lt;/style&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon.png&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;senha&quot;&gt;
+        &lt;header&gt;
+            
+                &lt;p class=&quot;unidade&quot;&gt;
+                   Secretaria de Saúde                &lt;/p&gt;
+           
+          
+        &lt;/header&gt;
+        &lt;section&gt;
+           
+                &lt;p class=&quot;prioridade&quot;&gt;
+                   normal                &lt;/p&gt;
+           
+            &lt;p class=&quot;senha&quot;&gt;
+                A314            &lt;/p&gt;
+            
+           
+                &lt;p class=&quot;servico&quot;&gt;
+                    TFD
+                &lt;/p&gt;
+            
+            
+           
+            
+           
+                &lt;div class=&quot;data-hora&quot;&gt;
+                    &lt;p class=&quot;data&quot;&gt;
+                       Data e hora da chegada: 2023-01-20  19:30:47                    &lt;/p&gt;
+                  
+                &lt;/div&gt;
+          
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;
+                Modificado por wepsistemas
+            &lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;): failed to open stream: No such file or directory
+in FCPATH/vendor/mpdf/mpdf/src/Mpdf.php on line 9641.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 FCPATH/vendor/mpdf/mpdf/src/Mpdf.php(9641): fopen()
+ 3 APPPATH/Controllers/Api.php(63): Mpdf\Mpdf->Output()
+ 4 APPPATH/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->distribui()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-20 20:19:30 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:27:10 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:27:44 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:30:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:31:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:36:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:46:17 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:47:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:49:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:52:18 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:57:39 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:57:40 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:59:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 20:59:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 21:09:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 21:10:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 21:11:00 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`novosga_db`.`atendimentos`, CONSTRAINT `FK_29E906E7226EFC79` FOREIGN KEY (`prioridade_id`) REFERENCES `prioridades` (`id`)) in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/sgapi/system/BaseModel.php(750): CodeIgniter\Model->doInsert()
+#6 /var/www/html/sgapi/system/Model.php(695): CodeIgniter\BaseModel->insert()
+#7 /var/www/html/sgapi/app/Models/SenhaModel.php(63): CodeIgniter\Model->insert()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(43): App\Models\SenhaModel->novasenha()
+#9 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#12 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#13 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+ERROR - 2023-01-20 21:13:26 --> Error connecting to the database: mysqli_sql_exception: Connection timed out in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection timed out in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-20 21:13:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection timed out
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 APPPATH/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->distribui()
+ 9 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-20 21:13:33 --> Error connecting to the database: mysqli_sql_exception: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-20 21:13:33 --> Unable to connect to the database.
+Main connection [MySQLi]: No route to host
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 APPPATH/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->distribui()
+ 9 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-20 21:17:09 --> Error connecting to the database: mysqli_sql_exception: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-20 21:17:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No route to host
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 APPPATH/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->distribui()
+ 9 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-20 21:18:56 --> Error connecting to the database: mysqli_sql_exception: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/MySQLi/Connection.php(171): mysqli->real_connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#8 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No route to host in /var/www/html/sgapi/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/sgapi/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/sgapi/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/sgapi/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/sgapi/system/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/sgapi/system/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+#5 /var/www/html/sgapi/app/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/sgapi/app/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+#7 /var/www/html/sgapi/app/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+#8 /var/www/html/sgapi/system/CodeIgniter.php(925): App\Controllers\Api->distribui()
+#9 /var/www/html/sgapi/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/sgapi/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/sgapi/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-01-20 21:18:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No route to host
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(586): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/AtendimentoModel.php(46): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(35): App\Models\AtendimentoModel->getcontador()
+ 7 APPPATH/Controllers/Api.php(25): App\Controllers\Api->tirarsenha()
+ 8 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Api->distribui()
+ 9 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
