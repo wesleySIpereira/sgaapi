@@ -26,7 +26,7 @@ Install the dependencies and devDependencies and start the server.
 
 ```sh
 deve setar o mesmo banco de dados usad pelo novosga
-modifique o arquivo database.php dentro de app/config/
+modifique o arquivo database.php dentro deo app/config/
 
 ```
 
