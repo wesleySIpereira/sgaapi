@@ -11,6 +11,9 @@ if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
 
     exit($message);
 }
+// adicionado time zone sao paulo 
+date_default_timezone_set('America/Sao_Paulo');
+
 
 // Path to the front controller (this file)
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
