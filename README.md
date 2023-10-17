@@ -44,7 +44,7 @@ Modifique as linhas como o exemplo.
 
 | Tipo       |  Parametros    | endpoint                                             | Descrição           |
 | -------------|------------- | -------------------------------------------------------- | ---------------------- |
-| POST | id_unidade,id_servico,prioridade  | /sgapi/api/distribui  | Adiciona uma nova senha na fila.Retorna um binario em pdf.    |
+| POST | id_unidade,id_servico,prioridade  | /sgapi/api/tirarsenha  | Adiciona uma nova senha na fila.Retorna um binario em pdf.    |
 
 **Nota**: Se ainda não tem o Novosga instalado, segue o link do tutorial simplificado para linux e windows [Canal do Pereira](https://www.youtube.com/watch?v=WKR2GNmvMxI)
 
