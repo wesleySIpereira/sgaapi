@@ -32,8 +32,8 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => '192.168.5.111',
-        'username' => 'admin',
+        'hostname' => 'localhost',
+        'username' => 'wesley',
         'password' => '88081156',
         'database' => 'novosga_db',
         'DBDriver' => 'MySQLi',
